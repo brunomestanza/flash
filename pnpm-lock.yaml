@@ -8,21 +8,18 @@ importers:
 
   .:
     devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:packages/typescript-config
       prettier:
         specifier: ^3.1.0
         version: 3.1.0
       turbo:
         specifier: latest
         version: 1.11.0
+      typescript-config:
+        specifier: workspace:*
+        version: link:packages/typescript-config
 
   apps/web:
     dependencies:
-      '@repo/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       next:
         specifier: 14.0.3
         version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
@@ -32,10 +29,10 @@ importers:
       react-dom:
         specifier: ^18
         version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@repo/typescript-config':
+      ui:
         specifier: workspace:*
-        version: link:../../packages/typescript-config
+        version: link:../../packages/ui
+    devDependencies:
       '@rocketseat/eslint-config':
         specifier: ^2.1.0
         version: 2.1.0(eslint@8.53.0)(typescript@5.2.2)
@@ -66,14 +63,14 @@ importers:
       typescript:
         specifier: ^5
         version: 5.2.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
 
   packages/typescript-config: {}
 
   packages/ui:
     devDependencies:
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@turbo/gen':
         specifier: ^1.10.12
         version: 1.10.12(@types/node@20.5.2)(typescript@5.2.2)
@@ -98,6 +95,9 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
+      typescript-config:
+        specifier: workspace:*
+        version: link:../typescript-config
 
 packages:
 
